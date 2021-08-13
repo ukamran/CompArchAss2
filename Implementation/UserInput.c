@@ -67,12 +67,16 @@ void main()
 		count_modules++;
 	} while (count_modules < num_modules);
 	
+	//create an xme file using the first filename 
+	create_xme(filename_arr[0]);
+
 	//read each file. at the end, output the symbol table.
 	int i;
 	for (i = 0; i < count_modules; i++) {
 		//printf("%s \n", filename_arr[i]);
 		read_file(filename_arr[i],i, count_modules);
 	}
+
 	
 	getchar();
 
